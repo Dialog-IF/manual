@@ -1,0 +1,15 @@
+site:
+  title: Dialog - Local
+  start_page: dialog::index.adoc
+content:
+  sources:
+  - url: ./../dialog
+    branches: HEAD
+    start_path: manual
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+antora:
+  extensions:
+    - '@antora/lunr-extension'

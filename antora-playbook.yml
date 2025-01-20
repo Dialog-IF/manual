@@ -1,0 +1,16 @@
+site:
+  title: Dialog
+  start_page: dialog::index.adoc
+content:
+  sources:
+  - url: https://github.com/hlship/dialog.git
+    branches: [main]
+    start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+asciidoc:
+antora:
+  extensions:
+    - '@antora/lunr-extension'

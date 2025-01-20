@@ -1,0 +1,10 @@
+{:tasks
+ {local
+  {:doc "Locally build the docs"
+   :task (shell "watchexec"
+                "--clear"
+                "--notify"
+                "--watch" "../dialog/manual"
+                "--watch" "local-antora-playbook.yml" 
+                "--debounce" "500ms"
+                "npx antora --stacktrace local-antora-playbook.yml")}}}
