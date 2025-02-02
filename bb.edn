@@ -7,6 +7,7 @@
                 "--watch" "../dialog/manual"
                 "--watch" "local-antora-playbook.yml" 
                 "--watch" "ui-overrides"
+                "--watch" "lib"
                 "--debounce" "500ms"
                 "npx antora --stacktrace local-antora-playbook.yml")}
   build
