@@ -1,19 +1,19 @@
-body {
+article {
 	background-color: #ffffff;
 	font-family: Georgia, serif;
 	font-size: 20px;
 }
 
 
-main a:link {
+article a:link {
 	color: #445577;
 }
 
-main a:visited {
+article a:visited {
 	color: #8899bb;
 }
 
-main a:hover {
+article a:hover {
 	color: #7799ff;
 }
 
@@ -31,5 +31,6 @@ main a:hover {
 }
 
 footer.footer {
-    padding: 2px;
+    padding: 8px;
+    text-align: center;
 }
