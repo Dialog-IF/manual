@@ -1,0 +1,35 @@
+body {
+	background-color: #ffffff;
+	font-family: Georgia, serif;
+	font-size: 20px;
+}
+
+
+main a:link {
+	color: #445577;
+}
+
+main a:visited {
+	color: #8899bb;
+}
+
+main a:hover {
+	color: #7799ff;
+}
+
+.doc pre > code {
+	border: 2px solid #444444;
+	border-radius: 10px;
+	background: #E6DFC6 !important;
+	padding: .5em;
+}
+
+.doc div.output pre > code {
+	background-color: #eef4ff !important;
+	padding: .5em;
+	font-size: .9em;
+}
+
+footer.footer {
+    padding: 2px;
+}

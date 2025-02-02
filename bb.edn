@@ -6,5 +6,9 @@
                 "--notify"
                 "--watch" "../dialog/manual"
                 "--watch" "local-antora-playbook.yml" 
+                "--watch" "ui-overrides"
                 "--debounce" "500ms"
-                "npx antora --stacktrace local-antora-playbook.yml")}}}
+                "npx antora --stacktrace local-antora-playbook.yml")}
+  build
+  {:doc "Build the full documentation site"
+   :task (shell "npx antora --stacktrace antora-playbook.yml")}}}
