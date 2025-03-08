@@ -33,7 +33,7 @@ Retrieve the content:
 * `cd manual`
 * `bb local`
 
-This script uses `watchexec` to monitor the `pedestal/docs` folders (and others) for changes and (almost instantly!)
+This script uses `watchexec` to monitor the `dialog/docs` folders (and others) for changes and (almost instantly!)
 rebuild the output documentation.
 
 You'll have to manually refresh your browser.
