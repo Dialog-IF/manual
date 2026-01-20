@@ -3,12 +3,13 @@ site:
   start_page: dialog::index.adoc
 content:
   sources:
-    start_path: manual
   - url: https://github.com/Dialog-IF/dialog.git
     branches: ['hls/20250120-antora']
+    start_path: manual
   - url: https://github.com/hlship/dialog.git
     branches: ~
     tags: release-*
+    start_path: manual
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
