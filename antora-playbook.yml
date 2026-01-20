@@ -3,8 +3,11 @@ site:
   start_page: dialog::index.adoc
 content:
   sources:
-  - url: https://github.com/Dialog-IF/dialog.git
     start_path: manual
+  - url: https://github.com/Dialog-IF/dialog.git
+    branches: ['hls/20250120-antora']
+  - url: https://github.com/hlship/dialog.git
+    branches: ~
     tags: release-*
 ui:
   bundle:
