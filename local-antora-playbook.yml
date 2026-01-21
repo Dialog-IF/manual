@@ -3,7 +3,7 @@ site:
   start_page: dialog::index.adoc
 content:
   sources:
-  - url: ./../Dialog
+  - url: ./../dialog
     branches: HEAD
     start_path: manual
 ui:
