@@ -10,6 +10,9 @@ content:
     branches: ~
     tags: release-*
     start_path: manual
+  - url: https://github.com/Dialog-IF/dialog.git
+    branches: main
+    start_path: manual
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
