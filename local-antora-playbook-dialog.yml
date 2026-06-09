@@ -6,9 +6,6 @@ content:
   - url: ./../dialog
     branches: HEAD
     start_path: manual
-  - url: ./../aamachine
-    branches: HEAD
-    start_path: antora
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
