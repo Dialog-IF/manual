@@ -1,6 +1,6 @@
 site:
-  title: Dialog - Local
-  start_page: dialog::index.adoc
+  title: Å-machine - Local
+  start_page: aamachine:ROOT:index.adoc
 content:
   sources:
   - url: ./../aamachine
