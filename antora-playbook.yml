@@ -16,11 +16,7 @@ content:
     start_path: antora
   - url: https://github.com/hlship/dialog-ide.git
     branches: main      
-    start_path: docs    
-  - url: https://github.com/hlship/dialog-ide.git
-    branches: ~
-    tags: v*      
-    start_path: docs        
+    start_path: docs     
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
