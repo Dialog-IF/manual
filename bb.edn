@@ -1,15 +1,12 @@
-{:tasks
- {local
-  {:doc "Locally build the docs"
-   :task (shell "watchexec"
-                "--clear"
-                "--notify"
-                "--watch" "../dialog/manual"
-                "--watch" "local-antora-playbook.yml" 
-                "--watch" "ui-overrides"
-                "--watch" "lib"
-                "--debounce" "500ms"
-                "npx antora --stacktrace local-antora-playbook.yml")}
+{:paths ["src"]
+ :tasks
+ {:requires ([build :as b])
+  dialog
+  {:doc "Locally build dialog manual"
+   :task (b/local-build "dialog")}
+  aamachine
+  {:doc "Locally build aamachine manual"
+   :task (b/local-build "aamachine")}
   build
-  {:doc "Build the full documentation site"
+  {:doc "Build the full documentation site (dialog and aamachine)"
    :task (shell "npx antora --stacktrace antora-playbook.yml")}}}
