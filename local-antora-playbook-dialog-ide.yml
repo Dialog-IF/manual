@@ -1,0 +1,19 @@
+site:
+  title: Dialog IDE - Local
+  start_page: dialog-ide::index.adoc
+content:
+  sources:
+  - url: ./../dialog-ide
+    branches: HEAD
+    start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./ui-overrides
+asciidoc: 
+  extensions:
+    - lib/macros.js
+antora:
+  extensions:
+    - '@antora/lunr-extension'

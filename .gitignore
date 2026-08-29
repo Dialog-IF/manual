@@ -3,3 +3,4 @@ build/
 .lsp/
 node_modules/
 .nrepl-port
+.clojure-mcp

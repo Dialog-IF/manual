@@ -4,6 +4,9 @@
   dialog
   {:doc "Locally build dialog manual"
    :task (b/local-build "dialog")}
+  ide
+  {:doc "Locally build dialog-ide manual"
+   :task (b/local-build "dialog-ide" "docs")}
   aamachine
   {:doc "Locally build aamachine manual"
    :task (b/local-build "aamachine")}
