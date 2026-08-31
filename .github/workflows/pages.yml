@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Allows other repositories (e.g. the dialog or aamachine source repos) to force
+  # a rebuild/redeploy of the published manual by sending a repository_dispatch event
+  # of this type. See "Triggering a rebuild from another repository" in README.md.
+  repository_dispatch:
+    types: [rebuild-manual]
 
 permissions:
   contents: read
