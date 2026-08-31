@@ -93,27 +93,49 @@ A successful call returns HTTP 204 and a new "Publish to GitHub Pages" run appea
 
 ## Local Site Build
 
-When building locally, you will need two sibling workspaces: one for this repository, and one for the main
-Dialog source.
+For fast, iterative editing you can build a *single* manual against a local checkout of its
+source repository, rebuilding automatically whenever you save a change.
 
-Retrieve the content:
+Each local build expects the source repository to be checked out as a sibling of this `manual`
+directory:
 
-* `git clone https://github.com/dialog-if/manual.git` (or your own fork)
-* `git clone https://github.com/dialog-if/dialog.git` (or your own fork)
-* `cd manual`
-* `bb local`
+    dialog/          <- github.com/Dialog-IF/dialog
+    aamachine/       <- github.com/Dialog-IF/aamachine
+    dialog-ide/      <- github.com/Dialog-IF/dialog-ide
+    manual/          <- this repository
 
-This script uses `watchexec` to monitor the `dialog/docs` folders (and others) for changes and (almost instantly!)
-rebuild the output documentation.
+You only need the sibling(s) for the flavor(s) you actually want to build. For example:
 
-You'll have to manually refresh your browser.
+* `git clone https://github.com/Dialog-IF/manual.git` (or your own fork)
+* `git clone https://github.com/Dialog-IF/dialog.git` (or your own fork)
+* `cd manual && npm install`
+* `bb dialog`
 
-It will also generate desktop notifications when it runs (when on supported platforms).
+### The three flavors
+
+There are three local build flavors, each driven by a `bb` task with its own
+`local-antora-playbook-*.yml`:
+
+| Task           | Playbook                                | Sibling repo    | Source path |
+|----------------|-----------------------------------------|-----------------|-------------|
+| `bb dialog`    | `local-antora-playbook-dialog.yml`      | `../dialog`     | `manual`    |
+| `bb ide`       | `local-antora-playbook-dialog-ide.yml`  | `../dialog-ide` | `docs`      |
+| `bb aamachine` | `local-antora-playbook-aamachine.yml`   | `../aamachine`  | `antora`    |
+
+Run the task from the `manual` directory. Each task uses `watchexec` to monitor the relevant
+source folder (plus `ui-overrides`, `lib`, and the playbook itself) and rebuilds — almost
+instantly — on any change.
+
+You'll have to manually refresh your browser. On supported platforms each rebuild also raises a
+desktop notification.
+
+Run `bb tasks` to see every task; `bb build` runs the full production build (the same as
+`npx antora antora-playbook.yml`).
 
 ### Antora Notes
  
 On OS X, Antora stores Git repos in `~/Library/Caches/antora/` by default.
 
-Be careful to keep `antora-playbook.yml` and `local-antora-playbook.yml` in sync.
+Be careful to keep `antora-playbook.yml` and the `local-antora-playbook-*.yml` files in sync.
 
 We are currently using the default Antora UI, with overrides in the `ui-overrides` directory.

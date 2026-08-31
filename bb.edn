@@ -9,7 +9,7 @@
    :task (b/local-build "dialog-ide" "docs")}
   aamachine
   {:doc "Locally build aamachine manual"
-   :task (b/local-build "aamachine")}
+   :task (b/local-build "aamachine" "antora")}
   build
   {:doc "Build the full documentation site (dialog and aamachine)"
    :task (shell "npx antora --stacktrace antora-playbook.yml")}}}
