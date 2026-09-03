@@ -15,8 +15,13 @@ content:
     branches: main
     start_path: antora
   - url: https://github.com/Dialog-IF/dialog-ide.git
-    branches: main      
-    start_path: docs     
+    branches: main
+    start_path: docs
+  - url: https://github.com/Dialog-IF/dialog-ide.git
+    branches: ~
+    # docs/ only exists from v0.6.0 on; earlier tags have no start_path and break the build
+    tags: v*,!v0.0.*,!v0.1.*,!v0.2.*,!v0.3.*,!v0.4.*,!v0.5.*
+    start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
@@ -28,3 +33,4 @@ asciidoc:
 antora:
   extensions:
     - '@antora/lunr-extension'
+    - require: ./lib/dialog-ide-versions.js
